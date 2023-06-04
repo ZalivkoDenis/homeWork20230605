@@ -8,7 +8,7 @@ def task_9_105() -> str:
 
     :return: (string) {2}-{1}-{3}
     """
-    inWord = ''.join(chr(random.randint(65, 122)) for i in range(0, 12))
+    inWord = ''.join(chr(random.randint(65, 122)) for _ in range(0, 12))
 
     result = f'{inWord[:2]}-{inWord[9:1:-1]}-{inWord[-2::]}'
 
@@ -53,7 +53,8 @@ def task_9_92() -> str:
     i = 0
     while i < lenSnt:
         symbol = inSentence[i]
-        if i % 2 == 0: symbol = "ы"
+        if i % 2 == 0:
+            symbol = "ы"
         result += symbol
 
         i += 1
@@ -70,7 +71,7 @@ def task_9_38_a():
                 третью треть — на месте второй;
     :return: (string) {2}-{1}-{3}
     """
-    inWord = ''.join(chr(random.randint(65, 122)) for i in range(0, 12))
+    inWord = ''.join(chr(random.randint(65, 122)) for _ in range(0, 12))
 
     result = f'{inWord[4:8]}-{inWord[:4]}-{inWord[-4::]}'
 
@@ -89,7 +90,6 @@ def task_9_153() -> int:
     inText = 'Trtrtrtr rrrr yuy reeeeeee ieeey oereeooo eeeeee'
     symbol = 'e'
 
-    maxSmb = ''
     maxCount = 0
     lengthText = len(inText)
     i = 0
