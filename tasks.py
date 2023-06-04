@@ -53,7 +53,7 @@ def task_9_92() -> str:
     i = 0
     while i < lenSnt:
         symbol = inSentence[i]
-        if i % 2 == 0:
+        if (i + 1) % 2 == 0:
             symbol = "ы"
         result += symbol
 
